@@ -16,4 +16,4 @@ export const assets = {
   TioTaste,
 };
 
-export const url = "http://localhost:4000";
+export const url = "https://food-ordering-website-mern-backend.onrender.com";
