@@ -13,15 +13,15 @@ const ExploreMenu = ({ category, setCategory }) => {
         daring fusion creations, our food delivery platform ensures a seamless
         experience. From farm-fresh ingredients to eco-friendly packaging, we’re
         committed to delighting your taste buds while minimizing our
-        environmental footprint. Bon appétit!” 🍽️🚚🌟
+        environmental footprint. Bon appétit! 🍽️🚚🌟
       </p>
       <div className="explore-menu-list">
         {menu_list.map((item, index) => {
           return (
             <div
               onClick={() =>
-                setCategory((prev) =>
-                  prev === item.menu_name ? "all" : item.menu_name
+                setCategory(
+                  (prev) => (prev === item.menu_name ? "All" : item.menu_name) // Standardized to "All"
                 )
               }
               key={index}
@@ -30,7 +30,7 @@ const ExploreMenu = ({ category, setCategory }) => {
               <img
                 className={category === item.menu_name ? "active" : ""}
                 src={item.menu_image}
-                alt=""
+                alt={item.menu_name}
               />
               <p>{item.menu_name}</p>
             </div>
